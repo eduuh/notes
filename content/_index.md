@@ -1,5 +1,5 @@
 +++
-title = "Compose"
+title = "Eduuh"
 [data]
 baseChartOn = 3
 colors = ["#627c62", "#11819b", "#ef7f1a", "#4e1154"]
@@ -16,6 +16,6 @@ title = "Projects"
 {{< /column >}}
 
 {{< column >}}
-![diy](/images/scribble.jpg)
+![diy](/images/frustrated.jpg)
 {{< /column >}}
 {{< /block >}}

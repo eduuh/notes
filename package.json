@@ -1,7 +1,7 @@
 {
-  "name": "examplesite",
+  "name": "eduuh",
   "version": "1.0.0",
-  "description": "This guide covers the necessary bits. As the project evolves, it will only become more comprehensive",
+  "description": "Build with node",
   "main": "index.js",
   "scripts": {
     "dev": "tinacms dev -c \"hugo server -D\"",
