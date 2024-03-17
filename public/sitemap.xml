@@ -2,68 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/docs/compose/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/workflows/</loc>
     <lastmod>2024-03-18T00:00:22+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/install-theme/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/use-tina-cms/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/organize-content/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/shortcodes/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/search/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/mermaid/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/workflows/example/mermaid/</loc>
-    <lastmod>2024-03-18T00:00:22+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/graphs-charts-tables/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/clarity/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/customize/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/clarity/getting-started/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/compose/github-actions/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/clarity/features/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/clarity/customize/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/clarity/images/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/clarity/blogging/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/clarity/syntax-highlighting/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/clarity/theme-overrides/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/emoji/</loc>
     <lastmod>2024-03-17T14:13:37+03:00</lastmod>
@@ -117,7 +57,13 @@
     <lastmod>2024-03-17T14:13:37+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-17T14:13:37+03:00</lastmod>
+    <lastmod>2024-03-18T00:30:47+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/</loc>
+    <lastmod>2024-03-18T00:30:47+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/git/git/</loc>
+    <lastmod>2024-03-18T00:30:47+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
     <lastmod>2024-03-17T14:13:37+03:00</lastmod>

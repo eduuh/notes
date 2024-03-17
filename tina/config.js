@@ -105,9 +105,9 @@ export default defineConfig({
         ],
       },
       {
-        name: "tutorials",
-        label: "Tutorials",
-        path: "content/tutorials",
+        name: "workflow",
+        label: "Workflow",
+        path: "content/workflows",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "+++",
         format: "md",

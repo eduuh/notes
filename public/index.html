@@ -31,10 +31,6 @@
       
     
       
-    
-      
-    
-      
 </head>
 <body class="page-home" id="pagetop">
   <header class="nav_header">
@@ -61,13 +57,10 @@
   </div>
 		</li>
 		<li class="nav-item">
+			<a class="nav-link" href="http://localhost:1313/workflows/"><span>Workflow</span></a>
+		</li>
+		<li class="nav-item">
 			<a class="nav-link" href="http://localhost:1313/docs/"><span>Docs</span></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="http://localhost:1313/tutorials/"><span>Tutorials</span></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="https://docs.neuralvibes.com"><span>Example</span></a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="http://localhost:1313/blog/"><span>Blog</span></a>
@@ -92,17 +85,7 @@
       <div class="content">
 <div class="content">
   <section class="grid-2"  >
-<div><h1 id="compose-your-docs-with-ease">Compose your Docs with <strong>Ease</strong>.</h1>
-<p>Compose is a lean <code>Hugo</code> documentation theme, inspired by <a href="https://forestry.io/docs/welcome/">forestry.io</a>.</p>
-<div class="tip tip_warning">
-  Feel free to open a <a href="https://github.com/onweru/compose/pulls">PR</a>, raise an <a href="https://github.com/onweru/compose/issues/new/choose" title="Open a Github Issue">issue</a>(s) or request new feature(s).
-</div>
-<div class="tip">
-  <p>You can generate diagrams, flowcharts, and piecharts from text in a similar manner as markdown using <a href="/docs/compose/mermaid/">mermaid</a>.</p>
-<p>Or, <a href="/docs/compose/graphs-charts-tables/#show-a-pie-doughnut--bar-chart-at-once">generate graphs, charts</a> and tables from a csv, <del>or a json</del> file.</p>
-</div>
-<p><a href="docs/compose/" class="button">Read the Docs</a>
-<a href="https://github.com/onweru/compose" class="button">Download Theme</a></p>
+<div><h1 id="eduuhs-learning-notes">Eduuh's learning Notes</h1>
 </div>
 
 
@@ -240,28 +223,5 @@ const no_matches_found = 'No matches found';
 <script src="http://localhost:1313/js/search.min.abeb3dbbf70f22e769cf431d77c85732f41f277637f3da53d527e9bf5fa4e2583fd5f59ad7de1c8908962cd6a5744be60ae966a37e1d41eb3cd747ff35f36254.js" async></script>
 
 
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  let theme_input = elem('.color_choice');
-  let key = theme_input.value;
-
-  function getTheme(mode) {
-    return key == 'dark' ? 'dark' : 'base';
-  }
-
-  function initializeMermaid(mode) {
-    mermaid.initialize(
-    { startOnLoad: true, theme: getTheme(mode) }
-  );
-  }
-
-  initializeMermaid(key);
-
-  theme_input.addEventListener('change', e => {
-    location.reload();
-    initializeMermaid(e.target.value);
-  });
-</script>
 </body>
 </html>
