@@ -4,7 +4,8 @@
   "description": "This guide covers the necessary bits. As the project evolves, it will only become more comprehensive",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tinacms dev -c \"hugo server -D\"",
+    "build": "tinacms build && hugo"
   },
   "keywords": [],
   "author": "",
