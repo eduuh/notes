@@ -9,18 +9,18 @@
 <link rel="mask-icon" href='http://localhost:1313/favicons/safari-pinned-tab.svg'  color="#004750">
 <link rel="shortcut icon" href='http://localhost:1313/favicons/favicon.ico'>
 <meta name="msapplication-config" content='http://localhost:1313/favicons/browserconfig.xml'>
-<title>Creating a New Theme | Compose Docs</title><meta property="og:title" content="Creating a New Theme" />
+<title>Creating a New Theme | eduuhs notes</title><meta property="og:title" content="Creating a New Theme" />
 <meta property="og:description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&#39;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&#39;t cover using CSS to style your theme.
 We&#39;ll start with creating a new site with a very basic template." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/blog/creating-a-new-theme/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2014-09-28T00:00:00+00:00" />
-<meta property="article:modified_time" content="2014-09-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-03-17T14:13:37+03:00" />
 <meta itemprop="name" content="Creating a New Theme">
 <meta itemprop="description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&#39;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&#39;t cover using CSS to style your theme.
 We&#39;ll start with creating a new site with a very basic template."><meta itemprop="datePublished" content="2014-09-28T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2014-09-28T00:00:00+00:00" />
-<meta itemprop="wordCount" content="7509">
+<meta itemprop="dateModified" content="2024-03-17T14:13:37+03:00" />
+<meta itemprop="wordCount" content="7475">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Creating a New Theme"/>
 <meta name="twitter:description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&#39;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&#39;t cover using CSS to style your theme.
 We&#39;ll start with creating a new site with a very basic template."/>
@@ -34,8 +34,8 @@ We&#39;ll start with creating a new site with a very basic template.">
   <header class="nav_header">
 <nav class="wrap nav menu">
 	<a href='http://localhost:1313/' class="nav_brand">
-		<picture data-lit="http://localhost:1313/images/compose.svg" data-dark="http://localhost:1313/images/compose-light.svg">
-			<img src="http://localhost:1313/images/compose.svg" alt="Compose Docs Logo">
+		<picture data-lit="http://localhost:1313/images/logodark.png" data-dark="http://localhost:1313/images/compose-light.svg">
+			<img src="http://localhost:1313/images/logodark.png" alt="eduuhs notes Logo">
 		</picture>
 		<div class="nav_toggle toggle" title='Site Menu'><svg class="icon icon_harmburger">
   <use href="#harmburger"></use>
@@ -67,7 +67,7 @@ We&#39;ll start with creating a new site with a very basic template.">
 			<a class="nav-link" href="http://localhost:1313/blog/"><span>Blog</span></a>
 		</li>
 		<li class="nav-item nav_repo">
-			<a class="nav-link" href="https://github.com/onweru/compose/" target="_blank">
+			<a class="nav-link" href="https://github.com/eduuh/byte_safari" target="_blank">
 					<picture data-lit="http://localhost:1313/images/GitHubMarkLight.svg" data-dark="http://localhost:1313/images/GitHubMarkDark.svg">
 						<img src="http://localhost:1313/images/GitHubMarkLight.svg" alt="GitHub Repo">
 					</picture>
@@ -238,7 +238,7 @@ WARN: 2014/09/29 Unable to locate layout: [404.html]
 <h3 id="create-a-skeleton">Create a Skeleton</h3>
 <p>Use the hugo &quot;new&quot; command to create the skeleton of a theme. This creates the directory structure and places empty files for you to fill out.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl">    $ hugo new theme zafta
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
 </span></span><span class="line"><span class="ln"> 3</span><span class="cl">$ ls -l
 </span></span><span class="line"><span class="ln"> 4</span><span class="cl">total <span class="m">8</span>
 </span></span><span class="line"><span class="ln"> 5</span><span class="cl">drwxr-xr-x  <span class="m">2</span> quoha  staff   <span class="m">68</span> Sep <span class="m">29</span> 16:49 archetypes
@@ -416,7 +416,7 @@ in 1 ms
 <h3 id="make-a-static-home-page">Make a Static Home Page</h3>
 <p>Right now, that page is empty because we don't have any content and we don't have any logic in the template. Let's change that by adding some text to the template.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl"><span class="c">&lt;!-- vi themes/zafta/layouts/index.html --&gt;</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="ln">5</span><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hugo says hello!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -446,16 +446,20 @@ in 1 ms
 </span></span><span class="line"><span class="ln">21</span><span class="cl">&lt;/html&gt;
 </span></span></code></pre></div><h4 id="live-reload-1">Live Reload</h4>
 <p>Note: If you're running the server with the <code>--watch</code> option, you'll see different content in the file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hugo says hello!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script src=&#34;http://&#39;</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">        <span class="o">+</span> <span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span> <span class="o">||</span> <span class="s1">&#39;localhost&#39;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="o">+</span> <span class="s1">&#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="o">+</span> <span class="s1">&#39;script&gt;&#39;</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hugo says hello!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">      <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">        <span class="s1">&#39;&lt;script src=&#34;http://&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">          <span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span> <span class="o">||</span> <span class="s2">&#34;localhost&#34;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;:&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">          <span class="s1">&#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">          <span class="s2">&#34;script&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>When you use <code>--watch</code>, the Live Reload script is added by Hugo. Look for live reload in the documentation to see what it does and how to disable it.</p>
 <h3 id="build-a-dynamic-home-page">Build a &quot;Dynamic&quot; Home Page</h3>
 <p>&quot;Dynamic home page?&quot; Hugo's a static web site generator, so this seems an odd thing to say. I mean let's have the home page automatically reflect the content in the site every time Hugo builds it. We'll use iteration in the template to do that.</p>
@@ -476,30 +480,30 @@ in 1 ms
 </span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="nv">Categories</span> <span class="o">=</span> <span class="o">[]</span>
 </span></span><span class="line"><span class="ln"> 6</span><span class="cl">    +++
 </span></span><span class="line"><span class="ln"> 7</span><span class="cl">    :wq
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
 </span></span><span class="line"><span class="ln"> 9</span><span class="cl">    $ find themes/zafta/archetypes -type f <span class="p">|</span> xargs ls -l
 </span></span><span class="line"><span class="ln">10</span><span class="cl">    -rw-r--r--  <span class="m">1</span> quoha  staff   <span class="m">0</span> Sep <span class="m">29</span> 21:53 themes/zafta/archetypes/default.md
 </span></span><span class="line"><span class="ln">11</span><span class="cl">    -rw-r--r--  <span class="m">1</span> quoha  staff  <span class="m">51</span> Sep <span class="m">29</span> 21:54 themes/zafta/archetypes/post.md
-</span></span><span class="line"><span class="ln">12</span><span class="cl">    
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
 </span></span><span class="line"><span class="ln">13</span><span class="cl">    $ hugo --verbose new post/first.md
 </span></span><span class="line"><span class="ln">14</span><span class="cl">    INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/hugo.toml
 </span></span><span class="line"><span class="ln">15</span><span class="cl">    INFO: 2014/09/29 attempting to create  post/first.md of post
 </span></span><span class="line"><span class="ln">16</span><span class="cl">    INFO: 2014/09/29 curpath: /Users/quoha/Sites/zafta/themes/zafta/archetypes/post.md
 </span></span><span class="line"><span class="ln">17</span><span class="cl">    INFO: 2014/09/29 creating /Users/quoha/Sites/zafta/content/post/first.md
 </span></span><span class="line"><span class="ln">18</span><span class="cl">    /Users/quoha/Sites/zafta/content/post/first.md created
-</span></span><span class="line"><span class="ln">19</span><span class="cl">    
+</span></span><span class="line"><span class="ln">19</span><span class="cl">
 </span></span><span class="line"><span class="ln">20</span><span class="cl">    $ hugo --verbose new post/second.md
 </span></span><span class="line"><span class="ln">21</span><span class="cl">    INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/hugo.toml
 </span></span><span class="line"><span class="ln">22</span><span class="cl">    INFO: 2014/09/29 attempting to create  post/second.md of post
 </span></span><span class="line"><span class="ln">23</span><span class="cl">    INFO: 2014/09/29 curpath: /Users/quoha/Sites/zafta/themes/zafta/archetypes/post.md
 </span></span><span class="line"><span class="ln">24</span><span class="cl">    INFO: 2014/09/29 creating /Users/quoha/Sites/zafta/content/post/second.md
 </span></span><span class="line"><span class="ln">25</span><span class="cl">    /Users/quoha/Sites/zafta/content/post/second.md created
-</span></span><span class="line"><span class="ln">26</span><span class="cl">    
+</span></span><span class="line"><span class="ln">26</span><span class="cl">
 </span></span><span class="line"><span class="ln">27</span><span class="cl">    $ ls -l content/post
 </span></span><span class="line"><span class="ln">28</span><span class="cl">    total <span class="m">16</span>
 </span></span><span class="line"><span class="ln">29</span><span class="cl">    -rw-r--r--  <span class="m">1</span> quoha  staff  <span class="m">104</span> Sep <span class="m">29</span> 21:54 first.md
 </span></span><span class="line"><span class="ln">30</span><span class="cl">    -rw-r--r--  <span class="m">1</span> quoha  staff  <span class="m">105</span> Sep <span class="m">29</span> 21:57 second.md
-</span></span><span class="line"><span class="ln">31</span><span class="cl">    
+</span></span><span class="line"><span class="ln">31</span><span class="cl">
 </span></span><span class="line"><span class="ln">32</span><span class="cl">    $ cat content/post/first.md
 </span></span><span class="line"><span class="ln">33</span><span class="cl">    +++
 </span></span><span class="line"><span class="ln">34</span><span class="cl">    <span class="nv">Categories</span> <span class="o">=</span> <span class="o">[]</span>
@@ -507,10 +511,10 @@ in 1 ms
 </span></span><span class="line"><span class="ln">36</span><span class="cl">    <span class="nv">Tags</span> <span class="o">=</span> <span class="o">[]</span>
 </span></span><span class="line"><span class="ln">37</span><span class="cl">    <span class="nv">date</span> <span class="o">=</span> <span class="s2">&#34;2014-09-29T21:54:53-05:00&#34;</span>
 </span></span><span class="line"><span class="ln">38</span><span class="cl">    <span class="nv">title</span> <span class="o">=</span> <span class="s2">&#34;first&#34;</span>
-</span></span><span class="line"><span class="ln">39</span><span class="cl">    
+</span></span><span class="line"><span class="ln">39</span><span class="cl">
 </span></span><span class="line"><span class="ln">40</span><span class="cl">    +++
 </span></span><span class="line"><span class="ln">41</span><span class="cl">    my first post
-</span></span><span class="line"><span class="ln">42</span><span class="cl">    
+</span></span><span class="line"><span class="ln">42</span><span class="cl">
 </span></span><span class="line"><span class="ln">43</span><span class="cl">    $ cat content/post/second.md
 </span></span><span class="line"><span class="ln">44</span><span class="cl">    +++
 </span></span><span class="line"><span class="ln">45</span><span class="cl">    <span class="nv">Categories</span> <span class="o">=</span> <span class="o">[]</span>
@@ -518,10 +522,10 @@ in 1 ms
 </span></span><span class="line"><span class="ln">47</span><span class="cl">    <span class="nv">Tags</span> <span class="o">=</span> <span class="o">[]</span>
 </span></span><span class="line"><span class="ln">48</span><span class="cl">    <span class="nv">date</span> <span class="o">=</span> <span class="s2">&#34;2014-09-29T21:57:09-05:00&#34;</span>
 </span></span><span class="line"><span class="ln">49</span><span class="cl">    <span class="nv">title</span> <span class="o">=</span> <span class="s2">&#34;second&#34;</span>
-</span></span><span class="line"><span class="ln">50</span><span class="cl">    
+</span></span><span class="line"><span class="ln">50</span><span class="cl">
 </span></span><span class="line"><span class="ln">51</span><span class="cl">    +++
 </span></span><span class="line"><span class="ln">52</span><span class="cl">    my second post
-</span></span><span class="line"><span class="ln">53</span><span class="cl">    
+</span></span><span class="line"><span class="ln">53</span><span class="cl">
 </span></span><span class="line"><span class="ln">54</span><span class="cl">    $
 </span></span></code></pre></div><p>Build the web site and then verify the results.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl">$ rm -rf public
@@ -552,16 +556,16 @@ in 1 ms
 <p>There are three other types of templates: partials, content views, and terms. We will not go into much detail on these.</p>
 <h3 id="add-content-to-the-homepage">Add Content to the Homepage</h3>
 <p>The home page will contain a list of posts. Let's update its template to add the posts that we just created. The logic in the template will run every time we build the site.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">    <span class="c">&lt;!-- $ vi themes/zafta/layouts/index.html --&gt;</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">      {{ range first 10 .Data.Pages }}
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">      {{ end }}
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="c">&lt;!-- :wq --&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c">&lt;!-- $ vi themes/zafta/layouts/index.html --&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    {{ range first 10 .Data.Pages }}
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="c">&lt;!-- :wq --&gt;</span>
 </span></span></code></pre></div><p>Hugo uses the Go template engine. That engine scans the template files for commands which are enclosed between &quot;{{&quot; and &quot;}}&quot;. In our template, the commands are:</p>
 <ol>
 <li>range</li>
@@ -595,11 +599,11 @@ in 1 ms
 </span></span><span class="line"><span class="ln">20</span><span class="cl">    &lt;!DOCTYPE html&gt;
 </span></span><span class="line"><span class="ln">21</span><span class="cl">    &lt;html&gt;
 </span></span><span class="line"><span class="ln">22</span><span class="cl">    &lt;body&gt;
-</span></span><span class="line"><span class="ln">23</span><span class="cl">    
+</span></span><span class="line"><span class="ln">23</span><span class="cl">
 </span></span><span class="line"><span class="ln">24</span><span class="cl">        &lt;h1&gt;second&lt;/h1&gt;
-</span></span><span class="line"><span class="ln">25</span><span class="cl">    
+</span></span><span class="line"><span class="ln">25</span><span class="cl">
 </span></span><span class="line"><span class="ln">26</span><span class="cl">        &lt;h1&gt;first&lt;/h1&gt;
-</span></span><span class="line"><span class="ln">27</span><span class="cl">    
+</span></span><span class="line"><span class="ln">27</span><span class="cl">
 </span></span><span class="line"><span class="ln">28</span><span class="cl">    &lt;/body&gt;
 </span></span><span class="line"><span class="ln">29</span><span class="cl">    &lt;/html&gt;
 </span></span><span class="line"><span class="ln">30</span><span class="cl">    $
@@ -615,18 +619,18 @@ in 1 ms
 <p>Remember, any content that we haven't created a template for will end up using this template. That can be good or bad. Bad because I know that we're going to be adding different types of content and we're going to end up undoing some of the changes we've made. It's good because we'll be able to see immediate results. It's also good to start here because we can start to build the basic layout for the site. As we add more content types, we'll refactor this file and move logic around. Hugo makes that fairly painless, so we'll accept the cost and proceed.</p>
 <p>Please see the Hugo documentation on template rendering for all the details on determining which template to use. And, as the docs mention, if you're building a single page application (SPA) web site, you can delete all of the other templates and work with just the default single page. That's a refreshing amount of joy right there.</p>
 <h4 id="update-the-template-file">Update the Template File</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">    $ vi themes/zafta/layouts/_default/single.html
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">      {{ .Content }}
-</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl">    :wq
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">$ vi themes/zafta/layouts/_default/single.html
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    {{ .Content }}
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">:wq
 </span></span></code></pre></div><p>Build the web site and verify the results.</p>
 <pre><code>$ rm -rf public
 $ hugo --verbose
@@ -648,43 +652,41 @@ $ find public -type f -name '*.html' | xargs ls -l
 -rw-r--r--  1 quoha  staff    0 Sep 29 22:40 public/post/index.html
 -rw-r--r--  1 quoha  staff  128 Sep 29 22:40 public/post/second/index.html
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">    <span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>first<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>first<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>my first post<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    
-</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl">    
-</span></span><span class="line"><span class="ln">13</span><span class="cl">    $ cat public/post/second/index.html
-</span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">17</span><span class="cl">      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>second<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">20</span><span class="cl">      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>second<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">21</span><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>my second post<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">22</span><span class="cl">    
-</span></span><span class="line"><span class="ln">23</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">24</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">25</span><span class="cl">    $
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>first<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>first<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>my first post<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span><span class="line"><span class="ln">12</span><span class="cl">$ cat public/post/second/index.html
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>second<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>second<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>my second post<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">$
 </span></span></code></pre></div><p>Notice that the posts now have content. You can go to localhost:1313/post/first to verify.</p>
 <h3 id="linking-to-content">Linking to Content</h3>
 <p>The posts are on the home page. Let's add a link from there to the post. Since this is the home page, we'll update its template.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl">    $ vi themes/zafta/layouts/index.html
-</span></span><span class="line"><span class="ln">2</span><span class="cl">    <span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">      {{ range first 10 .Data.Pages }}
-</span></span><span class="line"><span class="ln">6</span><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">7</span><span class="cl">      {{ end }}
-</span></span><span class="line"><span class="ln">8</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">9</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl">$ vi themes/zafta/layouts/index.html
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">    {{ range first 10 .Data.Pages }}
+</span></span><span class="line"><span class="ln">6</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="ln">8</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>Build the web site and verify the results.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl">    $ rm -rf public
 </span></span><span class="line"><span class="ln"> 2</span><span class="cl">    $ hugo --verbose
@@ -699,25 +701,25 @@ $ find public -type f -name '*.html' | xargs ls -l
 </span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="m">0</span> tags created
 </span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="m">0</span> categories created
 </span></span><span class="line"><span class="ln">13</span><span class="cl">    in <span class="m">4</span> ms
-</span></span><span class="line"><span class="ln">14</span><span class="cl">    
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
 </span></span><span class="line"><span class="ln">15</span><span class="cl">    $ find public -type f -name <span class="s1">&#39;*.html&#39;</span> <span class="p">|</span> xargs ls -l
 </span></span><span class="line"><span class="ln">16</span><span class="cl">    -rw-r--r--  <span class="m">1</span> quoha  staff  <span class="m">149</span> Sep <span class="m">29</span> 22:44 public/index.html
 </span></span><span class="line"><span class="ln">17</span><span class="cl">    -rw-r--r--  <span class="m">1</span> quoha  staff  <span class="m">125</span> Sep <span class="m">29</span> 22:44 public/post/first/index.html
 </span></span><span class="line"><span class="ln">18</span><span class="cl">    -rw-r--r--  <span class="m">1</span> quoha  staff    <span class="m">0</span> Sep <span class="m">29</span> 22:44 public/post/index.html
 </span></span><span class="line"><span class="ln">19</span><span class="cl">    -rw-r--r--  <span class="m">1</span> quoha  staff  <span class="m">128</span> Sep <span class="m">29</span> 22:44 public/post/second/index.html
-</span></span><span class="line"><span class="ln">20</span><span class="cl">    
+</span></span><span class="line"><span class="ln">20</span><span class="cl">
 </span></span><span class="line"><span class="ln">21</span><span class="cl">    $ cat public/index.html
 </span></span><span class="line"><span class="ln">22</span><span class="cl">    &lt;!DOCTYPE html&gt;
 </span></span><span class="line"><span class="ln">23</span><span class="cl">    &lt;html&gt;
 </span></span><span class="line"><span class="ln">24</span><span class="cl">    &lt;body&gt;
-</span></span><span class="line"><span class="ln">25</span><span class="cl">    
+</span></span><span class="line"><span class="ln">25</span><span class="cl">
 </span></span><span class="line"><span class="ln">26</span><span class="cl">        &lt;h1&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;/post/second/&#34;</span>&gt;second&lt;/a&gt;&lt;/h1&gt;
-</span></span><span class="line"><span class="ln">27</span><span class="cl">    
+</span></span><span class="line"><span class="ln">27</span><span class="cl">
 </span></span><span class="line"><span class="ln">28</span><span class="cl">        &lt;h1&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;/post/first/&#34;</span>&gt;first&lt;/a&gt;&lt;/h1&gt;
-</span></span><span class="line"><span class="ln">29</span><span class="cl">    
+</span></span><span class="line"><span class="ln">29</span><span class="cl">
 </span></span><span class="line"><span class="ln">30</span><span class="cl">    &lt;/body&gt;
 </span></span><span class="line"><span class="ln">31</span><span class="cl">    &lt;/html&gt;
-</span></span><span class="line"><span class="ln">32</span><span class="cl">    
+</span></span><span class="line"><span class="ln">32</span><span class="cl">
 </span></span><span class="line"><span class="ln">33</span><span class="cl">    $
 </span></span></code></pre></div><h3 id="create-a-post-listing">Create a Post Listing</h3>
 <p>We have the posts displaying on the home page and on their own page. We also have a file public/post/index.html that is empty. Let's make it show a list of all posts (not just the first ten).</p>
@@ -749,40 +751,43 @@ $ find public -type f -name '*.html' | xargs ls -l
 </span></span><span class="line"><span class="ln">6</span><span class="cl">    -rw-rw-r--  <span class="m">1</span> mdhender  staff   <span class="m">342</span> Sep <span class="m">27</span> 15:08 public/post/second-post/index.html
 </span></span></code></pre></div><p>Notice that the page wasn't created at the top level. It was created in a sub-directory named 'about-time/'. That name came from our slug. Hugo will use the slug to name the generated content. It's a reasonable default, by the way, but we can learn a few things by fighting it for this file.</p>
 <p>One other thing. Take a look at the home page.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">    <span class="c">&lt;!-- $ cat public/index.html --&gt;</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://localhost:1313/post/theme/&#34;</span><span class="p">&gt;</span>creating a new theme<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://localhost:1313/about-time/&#34;</span><span class="p">&gt;</span>about<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://localhost:1313/post/second-post/&#34;</span><span class="p">&gt;</span>second<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://localhost:1313/post/first-post/&#34;</span><span class="p">&gt;</span>first<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script src=&#34;http://&#39;</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">            <span class="o">+</span> <span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span> <span class="o">||</span> <span class="s1">&#39;localhost&#39;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">        <span class="o">+</span> <span class="s1">&#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl">            <span class="o">+</span> <span class="s1">&#39;script&gt;&#39;</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c">&lt;!-- $ cat public/index.html --&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://localhost:1313/post/theme/&#34;</span><span class="p">&gt;</span>creating a new theme<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://localhost:1313/about-time/&#34;</span><span class="p">&gt;</span>about<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://localhost:1313/post/second-post/&#34;</span><span class="p">&gt;</span>second<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://localhost:1313/post/first-post/&#34;</span><span class="p">&gt;</span>first<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">      <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">        <span class="s1">&#39;&lt;script src=&#34;http://&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">          <span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span> <span class="o">||</span> <span class="s2">&#34;localhost&#34;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;:&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">          <span class="s1">&#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">          <span class="s2">&#34;script&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>Notice that the &quot;about&quot; link is listed with the posts? That's not desirable, so let's change that first.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">    <span class="c">&lt;!-- $ vi themes/zafta/layouts/index.html --&gt;</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>posts<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">      {{ range first 10 .Data.Pages }}
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">        {{ if eq .Type &#34;post&#34;}}
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">          <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        {{ end }}
-</span></span><span class="line"><span class="ln">10</span><span class="cl">      {{ end }}
-</span></span><span class="line"><span class="ln">11</span><span class="cl">    
-</span></span><span class="line"><span class="ln">12</span><span class="cl">      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>pages<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">      {{ range .Data.Pages }}
-</span></span><span class="line"><span class="ln">14</span><span class="cl">        {{ if eq .Type &#34;page&#34; }}
-</span></span><span class="line"><span class="ln">15</span><span class="cl">          <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">16</span><span class="cl">        {{ end }}
-</span></span><span class="line"><span class="ln">17</span><span class="cl">      {{ end }}
-</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">20</span><span class="cl">    <span class="c">&lt;!-- :wq --&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c">&lt;!-- $ vi themes/zafta/layouts/index.html --&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>posts<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    {{ range first 10 .Data.Pages }} {{ if eq .Type &#34;post&#34;}}
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    {{ end }} {{ end }}
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>pages<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    {{ range .Data.Pages }} {{ if eq .Type &#34;page&#34; }}
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    {{ end }} {{ end }}
+</span></span><span class="line"><span class="ln">14</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="c">&lt;!-- :wq --&gt;</span>
 </span></span></code></pre></div><p>Generate the web site and verify the results. The home page has two sections, posts and pages, and each section has the right set of headings and links in it.</p>
 <p>But, that about page still renders to about-time/index.html.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">    $ find public -name <span class="s1">&#39;*.html&#39;</span> <span class="p">|</span> xargs ls -l
@@ -803,19 +808,17 @@ $ find public -type f -name '*.html' | xargs ls -l
 <p>We can put the common bits into a shared template that's stored in the themes/zafta/layouts/partials/ directory.</p>
 <h3 id="create-the-header-and-footer-partials">Create the Header and Footer Partials</h3>
 <p>In Hugo, a partial is a sugar-coated template. Normally a template reference has a path specified. Partials are different. Hugo searches for them along a TODO defined search path. This makes it easier for end-users to override the theme's presentation.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">    $ vi themes/zafta/layouts/partials/header.html
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    :wq
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    
-</span></span><span class="line"><span class="ln">10</span><span class="cl">    $ vi themes/zafta/layouts/partials/footer.html
-</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">    :wq
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">$ vi themes/zafta/layouts/partials/header.html
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    :wq $ vi themes/zafta/layouts/partials/footer.html
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">:wq
 </span></span></code></pre></div><h3 id="update-the-home-page-template-to-use-the-partials">Update the Home Page Template to Use the Partials</h3>
 <p>The most noticeable difference between a template call and a partials call is the lack of path:</p>
 <pre><code>{{ template &quot;theme/partials/header.html&quot; . }}
@@ -828,19 +831,18 @@ $ find public -type f -name '*.html' | xargs ls -l
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">{{ partial &#34;header.html&#34; . }}
 </span></span><span class="line"><span class="ln"> 2</span><span class="cl">
 </span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>posts<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">{{ range first 10 .Data.Pages }}
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  {{ if eq .Type &#34;post&#34;}}
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  {{ end }}
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">{{ end }}
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
-</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>pages<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">{{ range .Data.Pages }}
-</span></span><span class="line"><span class="ln">12</span><span class="cl">  {{ if or (eq .Type &#34;page&#34;) (eq .Type &#34;about&#34;) }}
-</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">14</span><span class="cl">  {{ end }}
-</span></span><span class="line"><span class="ln">15</span><span class="cl">{{ end }}
-</span></span><span class="line"><span class="ln">16</span><span class="cl">{{ partial &#34;footer.html&#34; . }}
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">{{ range first 10 .Data.Pages }} {{ if eq .Type &#34;post&#34;}}
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">{{ end }} {{ end }}
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>pages<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">{{ range .Data.Pages }} {{ if or (eq .Type &#34;page&#34;) (eq .Type &#34;about&#34;) }}
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="p">&gt;</span>{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}<span class="p">&lt;/</span><span class="nt">a</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">  <span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">{{ end }} {{ end }} {{ partial &#34;footer.html&#34; . }}
 </span></span></code></pre></div><p>Generate the web site and verify the results. The title on the home page is now &quot;your title here&quot;, which comes from the &quot;title&quot; variable in the hugo.toml file.</p>
 <h3 id="update-the-default-single-template-to-use-the-partials">Update the Default Single Template to Use the Partials</h3>
 <pre><code>$ vi themes/zafta/layouts/_default/single.html
@@ -862,33 +864,26 @@ $ find public -type f -name '*.html' | xargs ls -l
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl"><span class="c">&lt;!-- themes/zafta/layouts/_default/single.html --&gt;</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">{{ partial &#34;header.html&#34; . }}
 </span></span><span class="line"><span class="ln">3</span><span class="cl">
-</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl">  {{ .Content }}
-</span></span><span class="line"><span class="ln">7</span><span class="cl">
-</span></span><span class="line"><span class="ln">8</span><span class="cl">{{ partial &#34;footer.html&#34; . }}
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">{{ .Content }} {{ partial &#34;footer.html&#34; . }}
 </span></span></code></pre></div><p>Generate the web site and verify the results. The posts now have the date displayed in them. There's a problem, though. The &quot;about&quot; page also has the date displayed.</p>
 <p>As usual, there are a couple of ways to make the date display only on posts. We could do an &quot;if&quot; statement like we did on the home page. Another way would be to create a separate template for posts.</p>
 <p>The &quot;if&quot; solution works for sites that have just a couple of content types. It aligns with the principle of &quot;code for today,&quot; too.</p>
 <p>Let's assume, though, that we've made our site so complex that we feel we have to create a new template type. In Hugo-speak, we're going to create a section template.</p>
 <p>Let's restore the default single template before we forget.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl">  <span class="c">&lt;!-- mkdir themes/zafta/layouts/post --&gt;</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">  $ vi themes/zafta/layouts/_default/single.html
-</span></span><span class="line"><span class="ln">3</span><span class="cl">  {{ partial &#34;header.html&#34; . }}
-</span></span><span class="line"><span class="ln">4</span><span class="cl">  
-</span></span><span class="line"><span class="ln">5</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl">    {{ .Content }}
-</span></span><span class="line"><span class="ln">7</span><span class="cl">  
-</span></span><span class="line"><span class="ln">8</span><span class="cl">  {{ partial &#34;footer.html&#34; . }}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl"><span class="c">&lt;!-- mkdir themes/zafta/layouts/post --&gt;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">$ vi themes/zafta/layouts/_default/single.html {{ partial &#34;header.html&#34; . }}
+</span></span><span class="line"><span class="ln">3</span><span class="cl">
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">{{ .Content }} {{ partial &#34;footer.html&#34; . }}
 </span></span></code></pre></div><p>Now we'll update the post's version of the single template. If you remember Hugo's rules, the template engine will use this version over the default.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln">1</span><span class="cl"><span class="c">&lt;!-- themes/zafta/layouts/post/single.html --&gt;</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">{{ partial &#34;header.html&#34; . }}
 </span></span><span class="line"><span class="ln">3</span><span class="cl">
-</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl">  {{ .Content }}
-</span></span><span class="line"><span class="ln">7</span><span class="cl">
-</span></span><span class="line"><span class="ln">8</span><span class="cl">{{ partial &#34;footer.html&#34; . }}
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">{{ .Content }} {{ partial &#34;footer.html&#34; . }}
 </span></span></code></pre></div><p>Note that we removed the date logic from the default template and put it in the post template. Generate the web site and verify the results. Posts have dates and the about page doesn't.</p>
 <h3 id="dont-repeat-yourself">Don't Repeat Yourself</h3>
 <p>DRY is a good design goal and Hugo does a great job supporting it. Part of the art of a good template is knowing when to add a new template and when to update an existing one. While you're figuring that out, accept that you'll be doing some refactoring. Hugo makes that easy and fast, so it's okay to delay splitting up a template.</p>
@@ -925,6 +920,10 @@ const no_matches_found = 'No matches found';
   <div class="wrap">
     <p>
       &copy; <span class="year">2024</span>
+        
+        <a href="https://github.com/eduuh/notes" target="_blank" rel="noopener">eduuh</a>
+        
+      
     </p>
     <a href="#pagetop" id="toTop" title=Back&#32;to&#32;top></a>
   </div>
@@ -1016,7 +1015,7 @@ const no_matches_found = 'No matches found';
 </svg>
 
 <script>
-  "use strict";const doc=document.documentElement,toggle_id="toggle",show_id="show",menu="menu",active="active";let site_title=`compose-docs`,root_url="/";root_url=root_url.startsWith("http")?root_url:window.location.origin;const go_back_class="button_back",line_class=".line",code_block_config=JSON.parse('{"maximum":10,"show":false}'),iconsPath=`icons/`,shell_based=["sh","shell","zsh","bash"],body=elem("body"),max_lines=code_block_config.maximum,show_lines=code_block_config.show,copy_id="panel_copy",wrap_id="panel_wrap",lines_id="panel_lines",panel_expand="panel_expand",panel_expanded="panel_expanded",panel_box="panel_box",panel_hide="panel_hide",panel_from="panel_from",full_height="initial",highlight="highlight",highlight_wrap="highlight_wrap",hash="#",light="light",dark="dark",storageKey=`${site_title}-color-mode`,mermaidThemeKey=`${site_title}-mermaid`,key="--color-mode",mode_data="data-mode",bank=window.localStorage;function isObj(e){return!!(e&&typeof e=="object"&&e!==null)}function createEl(e="div"){return document.createElement(e)}function emptyEl(e){for(;e.firstChild;)e.removeChild(e.firstChild)}function elem(e,t=document){let n=!!isObj(t)&&t.querySelector(e);return n||!1}function elems(e,t=document){return isObj(t)?t.querySelectorAll(e):[]}function pushClass(e,t){if(isObj(e)&&t){let n=e.classList;!n.contains(t)&&n.add(t)}}function deleteClass(e,t){if(isObj(e)&&t){let n=e.classList;!!n.contains(t)&&n.remove(t)}}function modifyClass(e,t){if(isObj(e)&&t){const n=e.classList;n.contains(t)?n.remove(t):n.add(t)}}function containsClass(e,t){if(isObj(e)&&t&&e!==document)return!!e.classList.contains(t)}function isChild(e,t){let n=isObj(e)&&t&&typeof t=="string";return!!(n&&e.closest(t))}function elemAttribute(e,t,n=null){if(n)e.setAttribute(t,n);else return n=e.getAttribute(t),n||!1}function deleteChars(e,t){let n=e;if(Array.isArray(t))for(let e=0;e<t.length;e++)n=n.replace(t[e],"");else n=n.replace(t,"");return n}function isBlank(e){return!e||e.trim().length===0}function isMatch(e,t){if(isObj(e)){if(t.isArray){let n=t.map(function(t){return e.matches(t)});return n.includes(!0)}return e.matches(t)}}function closestInt(e,t){return t.reduce(function(t,n){return Math.abs(n-e)<Math.abs(t-e)?n:t})}function hasClasses(e){if(isObj(e)){const t=e.classList;return t.length}}function wrapEl(e,t){e.parentNode.insertBefore(t,e),t.appendChild(e)}function wrapText(e,t,n="mark"){let s=`<${n}>`,o=`</${n}>`,r=`%3C${n}%3E`,c=`%3C/${n}%3E`;function i(t){let n=t.innerHTML,a=new RegExp(e,"gi"),i=e.length?n.match(a):null;if(i){i.forEach(function(e){n=n.replaceAll(e,`${s}${e}${o}`),t.innerHTML=n});const e=elems("img",t);e&&e.forEach(e=>{e.src=e.src.replaceAll(s,"").replaceAll(o,"").replaceAll(r,"").replaceAll(c,"")})}}const l=["h1","h2","h3","h4","h5","h6","p","code","td"];l.forEach(function(e){const n=elems(e,t);n.length&&n.forEach(function(e){e.children.length>=1?(Array.from(e.children).forEach(function(e){i(e)}),i(e)):i(e)})});const a=elems("a");a&&a.forEach(function(e){e.href=e.href.replaceAll(encodeURI(s),"").replaceAll(encodeURI(o),"")})}function parseBoolean(e=""){switch(e=e.trim().toLowerCase(),e){case"true":return!0;case"false":return!1;default:return void 0}}function loadSvg(e,t){t.innerHTML=`
+  "use strict";const doc=document.documentElement,toggle_id="toggle",show_id="show",menu="menu",active="active";let site_title=`eduuhs-notes`,root_url="/";root_url=root_url.startsWith("http")?root_url:window.location.origin;const go_back_class="button_back",line_class=".line",code_block_config=JSON.parse('{"maximum":15,"show":false}'),iconsPath=`icons/`,shell_based=["sh","shell","zsh","bash"],body=elem("body"),max_lines=code_block_config.maximum,show_lines=code_block_config.show,copy_id="panel_copy",wrap_id="panel_wrap",lines_id="panel_lines",panel_expand="panel_expand",panel_expanded="panel_expanded",panel_box="panel_box",panel_hide="panel_hide",panel_from="panel_from",full_height="initial",highlight="highlight",highlight_wrap="highlight_wrap",hash="#",light="light",dark="dark",storageKey=`${site_title}-color-mode`,mermaidThemeKey=`${site_title}-mermaid`,key="--color-mode",mode_data="data-mode",bank=window.localStorage;function isObj(e){return!!(e&&typeof e=="object"&&e!==null)}function createEl(e="div"){return document.createElement(e)}function emptyEl(e){for(;e.firstChild;)e.removeChild(e.firstChild)}function elem(e,t=document){let n=!!isObj(t)&&t.querySelector(e);return n||!1}function elems(e,t=document){return isObj(t)?t.querySelectorAll(e):[]}function pushClass(e,t){if(isObj(e)&&t){let n=e.classList;!n.contains(t)&&n.add(t)}}function deleteClass(e,t){if(isObj(e)&&t){let n=e.classList;!!n.contains(t)&&n.remove(t)}}function modifyClass(e,t){if(isObj(e)&&t){const n=e.classList;n.contains(t)?n.remove(t):n.add(t)}}function containsClass(e,t){if(isObj(e)&&t&&e!==document)return!!e.classList.contains(t)}function isChild(e,t){let n=isObj(e)&&t&&typeof t=="string";return!!(n&&e.closest(t))}function elemAttribute(e,t,n=null){if(n)e.setAttribute(t,n);else return n=e.getAttribute(t),n||!1}function deleteChars(e,t){let n=e;if(Array.isArray(t))for(let e=0;e<t.length;e++)n=n.replace(t[e],"");else n=n.replace(t,"");return n}function isBlank(e){return!e||e.trim().length===0}function isMatch(e,t){if(isObj(e)){if(t.isArray){let n=t.map(function(t){return e.matches(t)});return n.includes(!0)}return e.matches(t)}}function closestInt(e,t){return t.reduce(function(t,n){return Math.abs(n-e)<Math.abs(t-e)?n:t})}function hasClasses(e){if(isObj(e)){const t=e.classList;return t.length}}function wrapEl(e,t){e.parentNode.insertBefore(t,e),t.appendChild(e)}function wrapText(e,t,n="mark"){let s=`<${n}>`,o=`</${n}>`,r=`%3C${n}%3E`,c=`%3C/${n}%3E`;function i(t){let n=t.innerHTML,a=new RegExp(e,"gi"),i=e.length?n.match(a):null;if(i){i.forEach(function(e){n=n.replaceAll(e,`${s}${e}${o}`),t.innerHTML=n});const e=elems("img",t);e&&e.forEach(e=>{e.src=e.src.replaceAll(s,"").replaceAll(o,"").replaceAll(r,"").replaceAll(c,"")})}}const l=["h1","h2","h3","h4","h5","h6","p","code","td"];l.forEach(function(e){const n=elems(e,t);n.length&&n.forEach(function(e){e.children.length>=1?(Array.from(e.children).forEach(function(e){i(e)}),i(e)):i(e)})});const a=elems("a");a&&a.forEach(function(e){e.href=e.href.replaceAll(encodeURI(s),"").replaceAll(encodeURI(o),"")})}function parseBoolean(e=""){switch(e=e.trim().toLowerCase(),e){case"true":return!0;case"false":return!1;default:return void 0}}function loadSvg(e,t){t.innerHTML=`
   <svg class="icon_${e}">
     <use xlink:href="#${e}"></use>
   </svg>`}function copyToClipboard(e){let t,n,s;t=createEl("textarea"),t.value=e,t.setAttribute("readonly",""),t.style.position="absolute",t.style.left="-9999px",n=document.getSelection(),doc.appendChild(t),s=n.rangeCount>0&&n.getRangeAt(0),t.select(),document.execCommand("copy"),doc.removeChild(t),s&&(n.removeAllRanges(),n.addRange(s))}const snippet_actions=[{icon:"copy",id:"copy",title:copy_text,show:!0},{icon:"order",id:"lines",title:toggle_line_numbers_text,show:!0},{icon:"carly",id:"wrap",title:toggle_line_wrap_text,show:!1},{icon:"expand",id:"expand",title:resize_snippet,show:!1}];function addLines(e){let t=e.textContent;const n=[];t.includes(`
