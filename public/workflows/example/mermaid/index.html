@@ -9,122 +9,24 @@
 <link rel="mask-icon" href='http://localhost:1313/favicons/safari-pinned-tab.svg'  color="#004750">
 <link rel="shortcut icon" href='http://localhost:1313/favicons/favicon.ico'>
 <meta name="msapplication-config" content='http://localhost:1313/favicons/browserconfig.xml'>
-<title>404 Page not found | eduuhs notes</title><meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/404.html" />
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content=""/>
+<title>Mermaid | eduuhs notes</title><meta property="og:title" content="Mermaid" />
+<meta property="og:description" content="Generate diagrams, flowcharts, and piecharts  from text in a similar manner as markdown." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/workflows/example/mermaid/" /><meta property="article:section" content="workflows" />
+
+<meta property="article:modified_time" content="2024-03-18T00:00:22+03:00" />
+<meta itemprop="name" content="Mermaid">
+<meta itemprop="description" content="Generate diagrams, flowcharts, and piecharts  from text in a similar manner as markdown.">
+<meta itemprop="dateModified" content="2024-03-18T00:00:22+03:00" />
+<meta itemprop="wordCount" content="1099">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Mermaid"/>
+<meta name="twitter:description" content="Generate diagrams, flowcharts, and piecharts  from text in a similar manner as markdown."/>
 
 <link rel="stylesheet" href="http://localhost:1313/css/styles.5403a82853549c7143980076de5a74b1acfa655a8f3f490771cdeb6b1bb85c19fc018d76c22b67654b39bb14a35e359f243b77c63d68aa963df466a37735b351.css" integrity="sha512-VAOoKFNUnHFDmAB23lp0saz6ZVqPP0kHcc3raxu4XBn8AY12witnZUs5uxSjXjWfJDt3xj1oqpY99GajdzWzUQ==">
+  <meta name="description" content="Generate diagrams, flowcharts, and piecharts  from text in a similar manner as markdown.">
 
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-  <link rel=stylesheet href=http://localhost:1313//css/lite-yt-embed.css>
-  <script src=http://localhost:1313//js/lite-yt-embed.js></script>
 </head>
-<body class="page-404" id="pagetop">
+<body class="page-page" id="pagetop">
   <header class="nav_header">
 <nav class="wrap nav menu">
 	<a href='http://localhost:1313/' class="nav_brand">
@@ -144,7 +46,7 @@
 </svg>
     </label>
     
-    <input type="search" class="search_field  standardize-input" placeholder="Search site" id="find" autocomplete="off" data-scope=''>
+    <input type="search" class="search_field  standardize-input" placeholder="Search workflows" id="find" autocomplete="off" data-scope='workflows'>
     <div class="search_results results"></div>
   </div>
 		</li>
@@ -176,13 +78,366 @@
 </nav>
 
   </header>
-  <div class="main wrap pt-4">
-      <div class="content">
-<main>
-  <h1 id="title">Not found</h1>
-  <p>Bummer! This page doesn't exist. <a href='http://localhost:1313/'>back home</a>.</p>
-</main>
-      </div></div><script>
+  <div class="main wrap pt-4"><div class="grid-auto"><aside class="aside menu">
+  <div>
+    <label class="aside_toggle toggle" title='Docs Menu' role="button">Docs Menu <svg class="icon icon_carly">
+  <use href="#carly"></use>
+</svg></label>
+  </div>
+  <section class="section aside_inner">
+    <h2 class="section_title"><a  href="http://localhost:1313/workflows/" class="group">Workflow</a></h2>
+      <section class="" id="docs-workflow">
+        <h3 class="section_link active"><a id="docs-mermaid" href="http://localhost:1313/workflows/example/mermaid/">Mermaid</a></h3>
+        <nav id="toc-mermaid">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sequence-diagrams">Sequence Diagrams</a></li>
+        <li><a href="#flow-charts">Flow Charts</a></li>
+        <li><a href="#graphs">Graphs</a></li>
+        <li><a href="#class-diagram">Class Diagram</a></li>
+        <li><a href="#state-diagram">State Diagram</a></li>
+        <li><a href="#relationship-diagrams">Relationship Diagrams</a></li>
+        <li><a href="#user-journey">User Journey</a></li>
+        <li><a href="#gantt">Gantt</a></li>
+        <li><a href="#pie-chart">Pie Chart</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </section>
+  </section>
+</aside>
+
+  <main class="content">
+    <h1>Mermaid</h1><p><a href="https://mermaidjs.github.io/">Mermaid</a> is library that helps you generate diagrams, flowcharts, and piecharts from text in a similar manner as markdown.</p>
+<p>With compose theme, you can use mermaid using a custom shortcode as follows:</p>
+<h3 id="sequence-diagrams">Sequence Diagrams</h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tpl" data-lang="tpl"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="x">sequenceDiagram
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="x">  participant Alice
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="x">  participant Bob
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="x">  Alice-&gt;&gt;John: Hello John, how are you?
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="x">  loop Healthcheck
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="x">      John-&gt;&gt;John: Fight against hypochondria
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="x">  end
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="x">  Note right of John: Rational thoughts&lt;br/&gt;prevail...
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="x">  John--&gt;&gt;Alice: Great!
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="x">  John-&gt;&gt;Bob: How about you?
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="x">  Bob--&gt;&gt;John: Jolly good!
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="o">&lt;</span> <span class="o">/</span><span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><p><strong>Result</strong></p>
+<div class="mermaid">
+sequenceDiagram
+participant Alice
+participant Bob
+Alice->>John: Hello John, how are you?
+loop Healthcheck
+John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts<br/>prevail...
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+</div>
+
+<h3 id="flow-charts">Flow Charts</h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tpl" data-lang="tpl"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="x">flowchart TB
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="x">  c1--&gt;a2
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="x">  subgraph one
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="x">  a1--&gt;a2
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="x">  end
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="x">  subgraph two
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="x">  b1--&gt;b2
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="x">  end
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="x">  subgraph three
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="x">  c1--&gt;c2
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="x">  end
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="x">  one --&gt; two
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="x">  three --&gt; two
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="x">  two --&gt; c2
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="o">&lt;</span> <span class="o">/</span><span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><p><strong>Result</strong></p>
+<div class="mermaid">
+flowchart TB
+c1-->a2
+subgraph one
+a1-->a2
+end
+subgraph two
+b1-->b2
+end
+subgraph three
+c1-->c2
+end
+one --> two
+three --> two
+two --> c2
+</div>
+
+<h3 id="graphs">Graphs</h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tpl" data-lang="tpl"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="x">graph TB
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="x">  sq[Square shape] --&gt; ci((Circle shape))
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="x">  subgraph A
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="x">    od&gt;Odd shape]-- Two line&lt;br/&gt;edge comment --&gt; ro
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="x">    di</span><span class="cp">{</span><span class="nf">Diamond</span> <span class="na">with</span> <span class="o">&lt;</span><span class="na">br</span><span class="o">/&gt;</span> <span class="na">line</span> <span class="na">break</span><span class="cp">}</span><span class="x"> -.-&gt; ro(Rounded&lt;br&gt;square&lt;br&gt;shape)
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="x">    di==&gt;ro2(Rounded square shape)
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="x">  end
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="x">  %% Notice that no text in shape are added here instead that is appended further down
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="x">  e --&gt; od3&gt;Really long text with linebreak&lt;br&gt;in an Odd shape]
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="x">  %% Comments after double percent signs
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="x">  e((Inner / circle&lt;br&gt;and some odd &lt;br&gt;special characters)) --&gt; f(,.?!+-*ز)
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="x">  cyr[Cyrillic]--&gt;cyr2((Circle shape Начало));
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="x">    classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+</span></span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="x">    classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+</span></span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="x">    class sq,e green
+</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="x">    class di orange
+</span></span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="o">&lt;</span> <span class="o">/</span><span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><p><strong>Result</strong></p>
+<div class="mermaid">
+graph TB
+sq[Square shape] --> ci((Circle shape))
+
+subgraph A
+od>Odd shape]-- Two line<br/>edge comment --> ro
+di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
+di==>ro2(Rounded square shape)
+end
+
+%% Notice that no text in shape are added here instead that is appended further down
+e --> od3>Really long text with linebreak<br>in an Odd shape]
+
+%% Comments after double percent signs
+e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-\*ز)
+
+cyr[Cyrillic]-->cyr2((Circle shape Начало));
+
+    classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+    classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+    class sq,e green
+    class di orange
+
+</div>
+
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tpl" data-lang="tpl"><span class="line"><span class="ln">1</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="x">graph LR
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="x">  A[Hard edge] --&gt;|Link text| B(Round edge)
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="x">  B --&gt; C</span><span class="cp">{</span><span class="nf">Decision</span><span class="cp">}</span><span class="x">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="x">  C --&gt;|One| D[Result one]
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="x">  C --&gt;|Two| E[Result two]
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="o">&lt;</span> <span class="o">/</span><span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><p><strong>Result</strong></p>
+<div class="mermaid">
+graph LR
+A[Hard edge] -->|Link text| B(Round edge)
+B --> C{Decision}
+C -->|One| D[Result one]
+C -->|Two| E[Result two]
+</div>
+
+<h3 id="class-diagram">Class Diagram</h3>
+<div class="mermaid">
+classDiagram
+Animal <|-- Duck
+Animal <|-- Fish
+Animal <|-- Zebra
+Animal : +int age
+Animal : +String gender
+Animal: +isMammal()
+Animal: +mate()
+class Duck{
++String beakColor
++swim()
++quack()
+}
+class Fish{
+-int sizeInFeet
+-canEat()
+}
+class Zebra{
++bool is_wild
++run()
+}
+</div>
+
+<h3 id="state-diagram">State Diagram</h3>
+<div class="mermaid">
+stateDiagram-v2
+[*] --> Active
+
+state Active {
+[*] --> NumLockOff
+NumLockOff --> NumLockOn : EvNumLockPressed
+NumLockOn --> NumLockOff : EvNumLockPressed
+--
+[*] --> CapsLockOff
+CapsLockOff --> CapsLockOn : EvCapsLockPressed
+CapsLockOn --> CapsLockOff : EvCapsLockPressed
+--
+[*] --> ScrollLockOff
+ScrollLockOff --> ScrollLockOn : EvScrollLockPressed
+ScrollLockOn --> ScrollLockOff : EvScrollLockPressed
+}
+</div>
+
+<div class="mermaid">
+stateDiagram-v2
+State1: The state with a note
+note right of State1
+Important information! You can write
+notes.
+end note
+State1 --> State2
+note left of State2 : This is the note to the left.
+</div>
+
+<h3 id="relationship-diagrams">Relationship Diagrams</h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tpl" data-lang="tpl"><span class="line"><span class="ln">1</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="x">erDiagram
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="x">  CUSTOMER ||--o</span><span class="cp">{</span> <span class="na">ORDER</span> <span class="o">:</span> <span class="na">places</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="na">ORDER</span> <span class="o">||--|</span><span class="cp">{</span> <span class="na">LINE</span><span class="o">-</span><span class="na">ITEM</span> <span class="o">:</span> <span class="na">contains</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="na">CUSTOMER</span> <span class="cp">}</span><span class="o">|..|</span><span class="cp">{</span> <span class="na">DELIVERY</span><span class="o">-</span><span class="na">ADDRESS</span> <span class="o">:</span> <span class="na">uses</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="o">/</span><span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span>
+</span></span></code></pre></div><p><strong>Result</strong></p>
+<div class="mermaid">
+erDiagram
+CUSTOMER ||--o{ ORDER : places
+ORDER ||--|{ LINE-ITEM : contains
+CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+</div>
+
+<h3 id="user-journey">User Journey</h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tpl" data-lang="tpl"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="x">journey
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="x">  title My working day
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="x">  section Go to work
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="x">    Make tea: 5: Me
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="x">    Go upstairs: 3: Me
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="x">    Do work: 1: Me, Cat
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="x">  section Go home
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="x">    Go downstairs: 5: Me
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="x">    Sit down: 5: Me
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="o">&lt;</span> <span class="o">/</span><span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><p><strong>Result</strong></p>
+<div class="mermaid">
+journey
+title My working day
+section Go to work
+Make tea: 5: Me
+Go upstairs: 3: Me
+Do work: 1: Me, Cat
+section Go home
+Go downstairs: 5: Me
+Sit down: 5: Me
+</div>
+
+<h3 id="gantt">Gantt</h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tpl" data-lang="tpl"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="x">gantt
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="x">  dateFormat  YYYY-MM-DD
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="x">  title       Adding GANTT diagram functionality to mermaid
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="x">  excludes    weekends
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="x">  %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week (&#34;sunday&#34;) or &#34;weekends&#34;, but not the word &#34;weekdays&#34;.)
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="x">  section A section
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="x">  Completed task            :done,    des1, 2014-01-06,2014-01-08
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="x">  Active task               :active,  des2, 2014-01-09, 3d
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="x">  Future task               :         des3, after des2, 5d
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="x">  Future task2              :         des4, after des3, 5d
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="x">  section Critical tasks
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="x">  Completed task in the critical line :crit, done, 2014-01-06,24h
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="x">  Implement parser and jison          :crit, done, after des1, 2d
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="x">  Create tests for parser             :crit, active, 3d
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="x">  Future task in critical line        :crit, 5d
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="x">  Create tests for renderer           :2d
+</span></span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="x">  Add to mermaid                      :1d
+</span></span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="x">  section Documentation
+</span></span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="x">  Describe gantt syntax               :active, a1, after des1, 3d
+</span></span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="x">  Add gantt diagram to demo page      :after a1  , 20h
+</span></span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="x">  Add another diagram to demo page    :doc1, after a1  , 48h
+</span></span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="x">
+</span></span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="x">  section Last section
+</span></span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="x">  Describe gantt syntax               :after doc1, 3d
+</span></span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="x">  Add gantt diagram to demo page      :20h
+</span></span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="x">  Add another diagram to demo page    :48h
+</span></span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="o">&lt;</span> <span class="o">/</span><span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><p><strong>Result</strong></p>
+<div class="mermaid">
+gantt
+dateFormat YYYY-MM-DD
+title Adding GANTT diagram functionality to mermaid
+excludes weekends
+%% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
+
+section A section
+Completed task :done, des1, 2014-01-06,2014-01-08
+Active task :active, des2, 2014-01-09, 3d
+Future task : des3, after des2, 5d
+Future task2 : des4, after des3, 5d
+
+section Critical tasks
+Completed task in the critical line :crit, done, 2014-01-06,24h
+Implement parser and jison :crit, done, after des1, 2d
+Create tests for parser :crit, active, 3d
+Future task in critical line :crit, 5d
+Create tests for renderer :2d
+Add to mermaid :1d
+
+section Documentation
+Describe gantt syntax :active, a1, after des1, 3d
+Add gantt diagram to demo page :after a1 , 20h
+Add another diagram to demo page :doc1, after a1 , 48h
+
+section Last section
+Describe gantt syntax :after doc1, 3d
+Add gantt diagram to demo page :20h
+Add another diagram to demo page :48h
+</div>
+
+<h3 id="pie-chart">Pie Chart</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tpl" data-lang="tpl"><span class="line"><span class="ln">1</span><span class="cl"><span class="cp">{{</span><span class="o">&lt;</span> <span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="x">pie
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="x">  title Key elements in Product X
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="x">  &#34;Calcium&#34; : 42.96
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="x">  &#34;Potassium&#34; : 50.05
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="x">  &#34;Magnesium&#34; : 10.01
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="x">  &#34;Iron&#34; :  5
+</span></span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="o">&lt;</span> <span class="o">/</span><span class="na">mermaid</span> <span class="o">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><p><strong>Result</strong></p>
+<div class="mermaid">
+pie
+title Key elements in Product X
+"Calcium" : 42.96
+"Potassium" : 50.05
+"Magnesium" : 10.01
+"Iron" : 5
+</div>
+
+
+    <div class="pager">
+  
+
+  
+</div>
+  </main>
+</div>
+</div><script>
 
 const copy_text = 'Copy';
 const copied_text = 'Copied';
@@ -310,5 +565,28 @@ const no_matches_found = 'No matches found';
 <script src="http://localhost:1313/js/search.min.abeb3dbbf70f22e769cf431d77c85732f41f277637f3da53d527e9bf5fa4e2583fd5f59ad7de1c8908962cd6a5744be60ae966a37e1d41eb3cd747ff35f36254.js" async></script>
 
 
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  let theme_input = elem('.color_choice');
+  let key = theme_input.value;
+
+  function getTheme(mode) {
+    return key == 'dark' ? 'dark' : 'base';
+  }
+
+  function initializeMermaid(mode) {
+    mermaid.initialize(
+    { startOnLoad: true, theme: getTheme(mode) }
+  );
+  }
+
+  initializeMermaid(key);
+
+  theme_input.addEventListener('change', e => {
+    location.reload();
+    initializeMermaid(e.target.value);
+  });
+</script>
 </body>
 </html>
