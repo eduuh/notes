@@ -2,10 +2,11 @@
 title = "Getting Started with Hugo"
 description = ""
 tags = [ "go", "golang", "hugo", "development" ]
-date = 2014-04-02T00:00:00.000Z
+date = "2014-04-02T00:00:00.000Z"
 categories = [ "Development", "golang" ]
 image = "/images/stuck.jpg"
 +++
+
 
 ## Step 1. Install Hugo
 
