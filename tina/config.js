@@ -22,9 +22,9 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "docs",
-        label: "Docs",
-        path: "content/docs",
+        name: "Notes",
+        label: "notes",
+        path: "content/notes",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "+++",
         format: "md",
